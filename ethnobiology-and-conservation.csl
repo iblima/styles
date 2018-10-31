@@ -72,7 +72,8 @@
         <else-if type="book">
           <text variable="edition" suffix=" ed. "/>
           <text variable="publisher" suffix=", "/>
-          <text variable="publisher-place" suffix=" "/>
+          <text variable="publisher-place" suffix=". "/>
+          <text variable="DOI" prefix=" https://doi.org/"/>
         </else-if>
         <else-if type="paper-conference">
           <text variable="event" prefix=" " suffix=" "/>
@@ -86,7 +87,8 @@
           <text variable="publisher" suffix=", "/>
           <text variable="publisher-place" suffix=", "/>
           <label strip-periods="false" suffix=" " variable="page" form="symbol"/>
-          <text variable="page" suffix=" "/>
+          <text variable="page" suffix=". "/>
+          <text variable="DOI" prefix=" https://doi.org/"/>
         </else-if>
         <else-if type="webpage">
           <text variable="URL" prefix="[" suffix="] "/>
@@ -95,13 +97,14 @@
         <else-if type="article article-journal article-magazine article-newspaper" match="any">
           <text variable="container-title" font-style="italic" suffix=" "/>
           <text variable="volume" suffix=":"/>
-          <text variable="page"/>
+          <text variable="page" suffix=". "/>
+          <text variable="DOI" prefix=" https://doi.org/"/>
         </else-if>
         <else-if type="report" match="any">
           <text variable="publisher" suffix=", "/>
           <text variable="publisher-place" suffix=". "/>
           <text variable="URL" prefix="[" suffix="]. "/>
-          <text variable="DOI" prefix="doi: "/>
+          <text variable="DOI" prefix=" https://doi.org/"/>
         </else-if>
         <else>
           <group suffix=" ">
